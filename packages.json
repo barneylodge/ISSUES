@@ -1,0 +1,168 @@
+{
+    "packageId": "c26bdac406e028",
+    "name": "Resident Reporting",
+    "description": "",
+    "buttons": [
+        {
+            "buttonId": "2d577eee2afca6",
+            "name": "REPORT ISSUE",
+            "description": "my first button description",
+            "type": "action",
+            "questions": [
+                {
+                    "question": "What is your apartment number?",
+                    "type": "keypad",
+                    "values": {
+                        "keys": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            0
+                        ],
+                        "delete": true,
+                        "max": 0
+                    },
+                    "validators": [],
+                    "questionId": "12a6174b4dd913",
+                    "number": 1
+                },
+                {
+                    "question": "What  do you wish to report",
+                    "type": "options",
+                    "values": {
+                        "description": "Common Parts Issue",
+                        "options": [
+                            "Noise",
+                            "Leak",
+                            "Security Issue",
+                            "Common Parts Issue"
+                        ],
+                        "multiple": "single",
+                        "none": false
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "2bf3bd41c6ec6c",
+                    "number": 2
+                },
+                {
+                    "question": "When did you hear the noise?",
+                    "type": "datetime",
+                    "values": {
+                        "options": [
+                            "time",
+                            "date",
+                            "range"
+                        ]
+                    },
+                    "validators": [],
+                    "questionId": "b2e13ad7d2a4",
+                    "number": 3
+                },
+                {
+                    "question": "Describe Security Issue",
+                    "type": "freetext",
+                    "values": {
+                        "description": "",
+                        "format": "medium"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1fc71fabfcb97d",
+                    "number": 4
+                },
+                {
+                    "question": "If you know the source, please enter.",
+                    "type": "freetext",
+                    "values": {
+                        "description": "",
+                        "format": "medium"
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1b99da85c1aea6",
+                    "number": 5
+                },
+                {
+                    "question": "Major Leak",
+                    "type": "options",
+                    "values": {
+                        "description": "",
+                        "options": [
+                            "yes",
+                            "no"
+                        ],
+                        "multiple": "single",
+                        "none": false
+                    },
+                    "validators": [],
+                    "compulsory": true,
+                    "questionId": "1889ef16243d0e",
+                    "number": 6
+                }
+            ],
+            "navigation": {
+                "id": "12a6174b4dd913",
+                "type": "node",
+                "parent": null,
+                "children": [
+                    {
+                        "id": "2bf3bd41c6ec6c",
+                        "type": "node",
+                        "parent": "12a6174b4dd913",
+                        "children": [
+                            {
+                                "id": "b2e13ad7d2a4",
+                                "type": "node",
+                                "parent": "2bf3bd41c6ec6c",
+                                "children": [],
+                                "rules": [
+                                    {
+                                        "type": "options",
+                                        "values": [
+                                            "Noise"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1fc71fabfcb97d",
+                                "type": "node",
+                                "parent": "2bf3bd41c6ec6c",
+                                "children": [],
+                                "rules": [
+                                    {
+                                        "type": "options",
+                                        "values": [
+                                            "Security Issue"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1b99da85c1aea6",
+                                "type": "node",
+                                "parent": "2bf3bd41c6ec6c",
+                                "children": [
+                                    {
+                                        "id": "1889ef16243d0e",
+                                        "type": "node",
+                                        "parent": "1b99da85c1aea6",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "webhooks": []
+        }
+    ]
+}
