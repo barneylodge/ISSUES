@@ -1,5 +1,5 @@
 {
-    "packageId": "c26bdac406e028",
+    "packageId": "2185f30627be62",
     "name": "Resident Reporting",
     "description": "",
     "buttons": [
@@ -154,7 +154,22 @@
                                         "id": "1889ef16243d0e",
                                         "type": "node",
                                         "parent": "1b99da85c1aea6",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "15d58f93ee90af",
+                                                "type": "node",
+                                                "parent": "1889ef16243d0e",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "rules": [
+                                    {
+                                        "type": "options",
+                                        "values": [
+                                            "Leak"
+                                        ]
                                     }
                                 ]
                             }
@@ -162,7 +177,32 @@
                     }
                 ]
             },
-            "webhooks": []
+            "webhooks": [
+                {
+                    "name": "notify endpoint",
+                    "type": "notify",
+                    "url": "http://buttonkit:8080/api/v1/send",
+                    "method": "POST",
+                    "parameters": {
+                        "dynamic": [
+                            "development",
+                            "presser",
+                            "12a6174b4dd913"
+                        ],
+                        "static": {
+                            "email": {
+                                "subject": "",
+                                "body": "[development][12a6174b4dd913] URGENT LEAK"
+                            },
+                            "sms": {
+                                "body": ""
+                            },
+                            "recipients": []
+                        }
+                    },
+                    "webhookId": "15d58f93ee90af"
+                }
+            ]
         }
     ]
 }
